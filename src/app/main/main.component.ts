@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Datos } from '../datos';
 import { FormsModule, } from '@angular/forms'; 
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-main',
-  imports: [FormsModule], /* aqui agregamos el FormsModule y me genera autom'aticamente el import*/
+  imports: [FormsModule, CommonModule], /* aqui agregamos el FormsModule y me genera autom'aticamente el import*/
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

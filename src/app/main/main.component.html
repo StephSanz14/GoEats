@@ -65,7 +65,11 @@
       </div>
       <div class="cantidadderecha">
       <p class="PrecioAlimento">${{item.precio}}°°</p>
-      <p class="msj">{{item.mensaje}}</p>
+      <p [ngClass]="{
+        'gris': item.mensaje==='Disponible',
+        'rojo': item.mensaje==='No disponible'
+      }">{{item.mensaje}}</p> 
+
     </div>
     </div>     
   </section> 
