@@ -1,0 +1,76 @@
+<select id="seleccion" [(ngModel)]="tipo" (change)="buscandoTipo(tipo)"> <!-- Estamos usando ngModel para hacer un binding bidireccionel entre el select y  el tipo de comida en la función de filtrar por tipo-->
+    <option value="desayuno">Desayuno</option> 
+    <option value="comida" >Comida</option>
+    <option value="cena">Cena</option>
+  </select> 
+
+  <!-- para seleccionar la imagen -->  
+   <div class="formImg">
+    <div class="seleccionimg">
+      <input class="archivo" type="file" (change)="onImageChange($event)"/>
+    </div>
+   <div>
+    <img class="seleccionImg"  [src]="imagen" alt=""/>
+   </div>  
+   </div>
+
+  <div class="formulario">
+  <div>
+    <label for="nombre" ></label>
+    <input type="text" id="nombre" [(ngModel)]="nombre" placeholder="Título"> <!-- usamos el double binding para llegar a la variable en el ts hay que inicializar el ngModel en los app component .ts y poner los import-->
+    <!-- EL PLACEHOLDER va en la primera sección del input -->
+  </div>
+  <div>
+    <label for="precio" class="form-label"></label>
+    <input type="number" class="form-control" id="precio" [(ngModel)]="precio" placeholder="Precio">  <!-- Estamos agregando información al array -->
+  </div>
+  <div>
+    <label for="cantidad" class="form-labelc"></label>
+    <input type="number" class="form-control" id="cantidad" [(ngModel)]="cantidad">  <!-- Estamos agregando información al array -->
+  </div>
+</div> <!-- termina el div de formulario -->
+<div>
+  <label for="descripcion" ></label>
+  <input type="textArea" id="descripcion" [(ngModel)]="descripcion" placeholder="Descripción"> <!-- usamos el double binding para llegar a la variable en el ts hay que inicializar el ngModel en los app component .ts y poner los import-->
+  <!-- EL PLACEHOLDER va en la primera sección del input -->
+</div>
+
+<div class="botones">
+<button class="btn" (click)="limpiarDatos()">Cancelar</button> <!-- EventBinding: Agregamos un evento al botón -->
+<button class="btn" (click)="agregarDatos()">Agregar</button> <!-- EventBinding: Agregamos un evento al botón -->
+</div>
+  
+
+  <!-- codigo para mostrar alimentos segun el select -->
+   <h1> Alimentos</h1>
+   @for(item of filtro; track item; let i=$index){
+    <section class="presentacion">
+    <div class="presentacionIzquierda">
+    <img src="{{item.imagen}}" alt="">
+    <div>
+    <p class="NombreAlimento">{{item.nombre}}</p>
+    <p class="DescripcionAlimento">{{item.descripcion}}</p>
+    </div>
+    </div>
+
+    <div class="presentacionDerecha">
+      <div class="cantidad-container">
+        <label for="cantidad" class="cantidadlabel">Cantidad: </label> 
+        <input 
+          type="number" 
+          class="cantidad-control" 
+          id="cantidad" 
+          [(ngModel)]="item.cantidad"
+          (change)="actualizarCantidad(i, item.cantidad)">
+      </div>
+      <div class="cantidadderecha">
+      <p class="PrecioAlimento">${{item.precio}}°°</p>
+      <p class="msj">{{item.mensaje}}</p>
+    </div>
+    </div>     
+  </section> 
+   }
+
+
+
+

@@ -1,0 +1,134 @@
+.formImg{
+    display: flex;
+}
+.seleccionImg{
+    height: 80px;
+    margin-right: 10px;
+    border: 2px dashed #ccc;
+    margin-left: 10px;
+}
+
+img{
+    height: 80px;
+    margin-right: 10px;
+}
+
+#seleccion{
+    border-color: #f9f9f9;
+    background-color:#f9f9f9;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.archivo{
+    padding-top: 5%;
+    font-weight: bolder;
+}
+
+.formulario{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-label{
+    margin-right: 10px;
+}
+
+.form-labelc{
+    margin-right: -80px;
+}
+
+.form-control{
+    width: 40%;
+}
+
+#descripcion{
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.botones{
+    display: flex;
+    justify-content: end;
+    margin-right: 100px;
+}
+
+button{
+    margin-left: 20px;
+}
+
+h1{
+    border-bottom: 2px solid gray;
+    align-items: center;
+    margin-right: 80px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.presentacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    margin-right: 80px;
+}
+
+.presentacionIzquierda{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.presentacionDerecha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -40px;
+}
+
+.NombreAlimento{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.DescripcionAlimento{
+    width: 300px;
+    word-break: break-word;
+    margin-top: -20px;
+    margin-right: 200px;
+    font-size: 14x;
+    color: gray;
+}
+
+.cantidad-container{
+    margin-left: 65px;
+    margin-right: -65px;
+}
+
+.cantidad-control{
+    width: 25%;
+}
+
+.cantidadderecha{
+    display: flex;
+    flex-direction: row;
+}
+
+.PrecioAlimento{
+    margin-left: -20px;
+    margin-right: 10px;
+    display: flex;
+    width: 50PX;
+    justify-content: right;
+}
+
+.msj{
+    width: 100px;
+}
+
+
+
+

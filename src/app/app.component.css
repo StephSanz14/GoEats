@@ -1,0 +1,39 @@
+    .main-container {
+    width: 100%;
+    display: flex;
+    background-color: #f9f9f9;
+    }
+
+    app-aside {
+    flex: 0 0 auto;
+    border-right: 2px solid gray;
+    }
+
+    .arriba{
+        height: 40px;
+        width: 100%;
+        border-bottom: 2px solid gray;
+    }
+
+    .vertical{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .abajo{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .izquierda {
+        padding-top: 5%;
+        padding-left: 5%;
+        width: 80%;
+        }
+    
+    .derecha{
+        border-left: 2px solid gray;
+        height: 100vh;
+    }

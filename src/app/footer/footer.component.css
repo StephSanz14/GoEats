@@ -1,0 +1,14 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+img{
+    width: 20px;
+    margin-left: 10px;
+}
+
+p{
+    margin: 0;
+    font-weight: bolder;
+}

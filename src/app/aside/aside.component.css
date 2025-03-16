@@ -1,0 +1,38 @@
+.aside-menu {
+  width: 200px;
+  padding: 5px 0;
+  height: 100vh;
+  
+}
+
+.aside-menu ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0; 
+}
+
+.aside-menu a {
+  text-decoration: none;
+  color: gray;
+}
+
+.aside-menu li {
+  width: 100%;
+  margin: 10px 0;
+  line-height: 1.8;
+  padding: 12px;
+}
+
+.aside-menu a:hover {
+  color: #008000;   
+}
+
+.config {
+  text-decoration: none;
+  color: gray;
+  margin-left: 10px;
+}
+
+.config:hover {
+  color: #008000;   
+}
